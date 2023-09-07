@@ -25,6 +25,6 @@ public class CollectionService {
     }
 
     public Integer sum(List<Integer> list) {
-        return list.stream().mapToInt(Integer::intValue).reduce(Integer::sum).getAsInt();
+        return list.stream().mapToInt(Integer::intValue).reduce(0, Integer::sum);
     }
 }
